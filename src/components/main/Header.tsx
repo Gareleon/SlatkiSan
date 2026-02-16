@@ -7,6 +7,7 @@ import Image from "next/image";
 import { LogOut } from "lucide-react";
 import { NavbarItems } from "../utility/constants";
 import Typography from "../utility/typography";
+import { GiCupcake } from "react-icons/gi";
 
 export default function Header() {
   const scrollToTop = () => {
@@ -44,6 +45,7 @@ export default function Header() {
           onClick={() => scrollToTop()}
         >
           {/* <Image src={logo.img} alt={logo.alt} width={80} height={80} /> */}
+          <GiCupcake size={60} className="text-primary" />
           <Typography variant="h1" text="Slatki san" />
         </div>
         <div ref={buttonRef}>
