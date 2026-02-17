@@ -1,6 +1,9 @@
 const Menu = () => {
   return (
-    <section className="flex flex-col items-center justify-center py-20 px-4 md:px-0">
+    <section
+      className="flex flex-col items-center justify-center py-20 px-4 md:px-0 h-screen"
+      id="menu"
+    >
       <h1 className="text-4xl font-bold text-center">Menu</h1>
       <p className="text-center text-lg">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.

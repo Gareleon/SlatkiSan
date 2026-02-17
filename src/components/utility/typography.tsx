@@ -34,7 +34,7 @@ const Typography: FC<TypographyProps> = ({
   };
 
   const classNames = {
-    h1: "scroll-m-20 text-4xl font-extra-bold tracking-tight lg:text-5xl",
+    h1: "scroll-m-20 text-4xl font-extra-bold tracking-tight lg:text-5xl text-primary",
     h2: "scroll-m-16 text-3xl font-bold tracking-tight lg:text-4xl",
     h3: "scroll-m-12 text-2xl font-semibold tracking-tight lg:text-3xl",
     h4: "scroll-m-10 text-xl font-medium tracking-tight lg:text-2xl",
