@@ -4,11 +4,13 @@ import Typography from "../utility/typography";
 
 const Hero = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-30 px-4 max-w-7xl mx-auto ">
-      <div className="w-1/2 md:w-fit flex flex-col justify-between gap-10">
-        <h1 className="text-4xl font-bold text-center">
-          Zasladi se kao u najslađem snu
-        </h1>
+    <section className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center py-30 px-4 max-w-7xl mx-auto ">
+      <div className="w-full md:w-fit flex flex-col justify-between gap-10">
+        <Typography
+          variant="h2"
+          text="Zasladi se kao u najslađem snu"
+          className="text-accent text-center"
+        />
         <p className="text-center text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
           risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
@@ -18,11 +20,11 @@ const Hero = () => {
           sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae,
           consequat in, pretium at, leo. Nullam dolore
         </p>
-        <Button className="w-1/4 mx-auto">
+        <Button className="w-1/2 md:w-1/4 mx-auto">
           <Typography text="Iskusi san" variant="h5" />
         </Button>
       </div>
-      <div className="w-1/2 md:w-fit">
+      <div className="w-full md:w-fit">
         <Image
           src="/images/hero.jpg"
           alt="Hero image"

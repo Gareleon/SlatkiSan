@@ -46,7 +46,7 @@ export default function Header() {
         >
           {/* <Image src={logo.img} alt={logo.alt} width={80} height={80} /> */}
           <GiCupcake size={60} className="text-primary" />
-          <Typography variant="h1" text="Slatki san" />
+          <h1 className="text-primary text-4xl font-bold">Slatki san</h1>
         </div>
         <div ref={buttonRef}>
           <IoMdMenu
@@ -89,9 +89,9 @@ export default function Header() {
                 }`}
                 className={`${
                   index === NavbarItems.length - 1
-                    ? "text-white text-xl"
+                    ? "text-white text-xl bg-accent hover:bg-slate-400/60"
                     : "text-lg font-medium text-primary hover:text-slate-500"
-                }`}
+                } cursor-pointer`}
               >
                 {item.title}
               </Button>

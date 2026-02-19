@@ -5,7 +5,7 @@ import Typography from "../utility/typography";
 const Highlights = () => {
   return (
     <section
-      className="flex flex-col gap-5 items-center justify-center pt-30 py-20 px-4 md:px-0"
+      className="flex flex-col gap-5 items-center justify-center py-20 px-4 md:px-0"
       id="highlights"
     >
       <Typography variant="h1" text="Popularni slatkiši" />

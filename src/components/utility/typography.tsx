@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { FC, HTMLAttributes } from "react";
 import { Playfair_Display, Lato, Open_Sans } from "next/font/google";
+import DecorativeDivider from "./decorativeDivider";
 
 // Import fonts
 const playfair = Playfair_Display({
@@ -34,7 +35,7 @@ const Typography: FC<TypographyProps> = ({
   };
 
   const classNames = {
-    h1: "scroll-m-20 text-4xl font-extra-bold tracking-tight lg:text-5xl text-primary",
+    h1: "scroll-m-24 text-4xl font-extra-bold tracking-tight lg:text-5xl text-primary",
     h2: "scroll-m-16 text-3xl font-bold tracking-tight lg:text-4xl",
     h3: "scroll-m-12 text-2xl font-semibold tracking-tight lg:text-3xl",
     h4: "scroll-m-10 text-xl font-medium tracking-tight lg:text-2xl",
@@ -48,6 +49,18 @@ const Typography: FC<TypographyProps> = ({
   const defaultClassName = classNames[variant];
   const fontClassName = fontClasses[variant];
   const combinedClassName = cn(defaultClassName, fontClassName, className);
+
+  // Special layout only for h1
+  if (variant === "h1") {
+    return (
+      <div className="flex flex-col items-center text-center">
+        <h1 className={combinedClassName} {...props}>
+          {text}
+        </h1>
+        <DecorativeDivider className="max-w-md" />
+      </div>
+    );
+  }
 
   return (
     <Tag className={combinedClassName} {...props}>

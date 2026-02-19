@@ -150,6 +150,6 @@
     @apply bg-background text-foreground;
   }
   section {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto scroll-mt-7;
   }
 }
