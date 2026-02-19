@@ -104,7 +104,7 @@ const Map = () => {
   };
   return (
     <section
-      className="flex flex-col gap-5 items-center justify-center scroll-mt-18 py-20 px-4 md:px-0 h-screen"
+      className="flex flex-col gap-5 items-center justify-center  py-20 px-4 md:px-0 min-h-screen"
       id="contact"
     >
       <Typography variant="h1" text="Kontakt" />
@@ -113,7 +113,7 @@ const Map = () => {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.9780765295995!2d22.58613147636161!3d43.15934168423171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47553d2e0fa7effd%3A0x43b783a57bf66d79!2z0JPQvtC70LXQvNC4INCc0L7RgdGCLCBLbmphemEgTWlsb8WhYSwgUGlyb3QgMTgzMDA!5e1!3m2!1sen!2srs!4v1771484098501!5m2!1sen!2srs"
             width="100%"
-            height="450"
+            height="100%"
             loading="lazy"
             className="w-full h-full rounded-3xl shadow-xl border border-border transition-all"
             referrerPolicy="no-referrer-when-downgrade"
@@ -230,8 +230,8 @@ const Map = () => {
           </form>
         </div>
       </div>
-      {/* <div className="w-full md:w-fit">
-        <p className="text-center text-lg">
+      <div className="w-full md:w-fit">
+        <p className="text-center text-lg max-w-fit">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
           risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
           ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula
@@ -240,7 +240,7 @@ const Map = () => {
           sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae,
           consequat in, pretium at, leo. Nullam dolore
         </p>
-      </div> */}
+      </div>
     </section>
   );
 };

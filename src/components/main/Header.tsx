@@ -39,14 +39,16 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 z-50 flex w-full  bg-background/90 shadow-lg backdrop-blur-sm">
-      <nav className="max-w-screen-xl mx-auto w-full  flex items-center justify-between gap-4 p-4 ">
+      <nav className="max-w-7xl mx-auto w-full  flex items-center justify-between gap-4 p-4 ">
         <div
-          className="flex items-center gap-4 text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text hover:cursor-pointer"
+          className="flex items-center gap-4 text-transparent bg-linear-to-r from-primary to-secondary bg-clip-text hover:cursor-pointer"
           onClick={() => scrollToTop()}
         >
           {/* <Image src={logo.img} alt={logo.alt} width={80} height={80} /> */}
           <GiCupcake size={60} className="text-primary" />
-          <h1 className="text-primary text-4xl font-bold">Slatki san</h1>
+          <h1 className="hidden md:block text-primary text-4xl font-bold">
+            Slatki san
+          </h1>
         </div>
         <div ref={buttonRef}>
           <IoMdMenu
@@ -57,7 +59,7 @@ export default function Header() {
         </div>
 
         <div
-          className={`absolute lg:hidden md:rounded-sm w-full md:w-fit md:px-8 md:py-6 shadow-lg bottom-0 translate-y-full py-4 z-40 left-0 md:left-auto md:right-0 backdrop-blur-lg bg-gradient-to-r from-primary/95 to-secondary/95 items-center justify-center gap-4 transition-opacity duration-700 ease-in-out transform ${
+          className={`absolute lg:hidden md:rounded-sm w-full md:w-fit md:px-8 md:py-6 shadow-lg bottom-0 translate-y-full py-4 z-40 left-0 md:left-auto md:right-0 backdrop-blur-lg bg-linear-to-r from-primary/95 to-secondary/95 items-center justify-center gap-4 transition-opacity duration-700 ease-in-out transform ${
             showMenu ? "opacity-100 flex" : "hidden opacity-0"
           }`}
           ref={ref}
