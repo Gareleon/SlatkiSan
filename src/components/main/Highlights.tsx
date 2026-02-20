@@ -1,5 +1,6 @@
 import { HiglightsImages } from "../utility/constants";
 import { CarouselPlugin } from "../utility/highlightsCarousel";
+import Title from "../utility/title";
 import Typography from "../utility/typography";
 
 const Highlights = () => {
@@ -8,7 +9,7 @@ const Highlights = () => {
       className="flex flex-col gap-5 items-center justify-center py-20 px-4 md:px-0 "
       id="highlights"
     >
-      <Typography variant="h1" text="Popularni slatkiši" />
+      <Title text="Popularni slatkiši" />
       <CarouselPlugin images={HiglightsImages} />
       <p className="text-center text-lg">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.

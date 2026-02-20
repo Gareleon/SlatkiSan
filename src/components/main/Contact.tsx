@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import { useState } from "react";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
+import Title from "../utility/title";
 
 const Map = () => {
   // State to manage form inputs
@@ -107,7 +108,7 @@ const Map = () => {
       className="flex flex-col gap-5 items-center justify-center  py-20 px-4 md:px-0 min-h-screen"
       id="contact"
     >
-      <Typography variant="h1" text="Kontakt" />
+      <Title text="Kontakt" />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 w-full h-full">
         <div>
           <iframe
