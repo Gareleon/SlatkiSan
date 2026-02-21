@@ -1,15 +1,86 @@
 import { cn } from "@/lib/utils";
 import { FC, HTMLAttributes } from "react";
-import { Playfair_Display, Lato, Open_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import DecorativeDivider from "./decorativeDivider";
 
 // Import fonts
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["700", "900"],
+const playfair = localFont({
+  src: [
+    {
+      path: "../../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Playfair_Display/static/PlayfairDisplay-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-playfair-display",
 });
-const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
-const openSans = Open_Sans({ subsets: ["latin"], weight: ["300", "400"] });
+
+const lato = localFont({
+  src: [
+    {
+      path: "../../fonts/Lato/Lato-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Lato/Lato-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../fonts/Lato/Lato-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Lato/Lato-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-lato",
+});
+
+const openSans = localFont({
+  src: [
+    {
+      path: "../../fonts/Open_Sans/static/OpenSans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Open_Sans/static/OpenSans-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../fonts/Open_Sans/static/OpenSans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Open_Sans/static/OpenSans-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-open-sans",
+});
 
 type TypographyProps = {
   variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
