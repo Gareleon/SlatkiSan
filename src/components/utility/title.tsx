@@ -2,36 +2,38 @@
 
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import Typography from "./typography";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Typography from "./typography";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Title = ({ text }: { text: string }) => {
-  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const titleRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    gsap.to(titleRef.current, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      ease: "back.out(1.7)",
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: "top 80%", // when element reaches 80% of viewport
-        toggleActions: "play none none none",
-      },
-    });
-  });
+    if (!titleRef.current) return;
+
+    gsap.fromTo(
+      titleRef.current,
+      { y: 80, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+  }, []);
 
   return (
-    <Typography
-      ref={titleRef}
-      variant="h1"
-      text={text}
-      className="translate-y-20 opacity-0"
-    />
+    <div ref={titleRef}>
+      <Typography variant="h1" text={text} />
+    </div>
   );
 };
 
