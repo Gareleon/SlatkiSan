@@ -57,6 +57,7 @@ const Hero = () => {
           width={1024}
           height={1024}
           className="rounded-md shadow-primary shadow-xl drop-shadow-border"
+          loading="eager"
         ></Image>
       </div>
     </section>
